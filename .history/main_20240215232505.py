@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from schemas import list_serializer, Todo
+from schemas import list_serializer
 from database import collection_name
 
 app = FastAPI()
@@ -11,6 +11,6 @@ def get_todos():
 
 
 @app.post("todos/create", tags=['TODOS'])
-def create_todo(todo: Todo):
-     collection_name.insert_one(dict(todo))
+def create_todo(collection):
+     pass
      

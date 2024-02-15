@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from schemas import list_serializer, Todo
+from schemas import *
 from database import collection_name
 
 app = FastAPI()
